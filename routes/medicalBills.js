@@ -5,8 +5,7 @@ const {Bill} = require('../db/bill')
 //localhost:1340/bills
 router.get('/', async (req, res, next) => {
     try {
-        // Eager Loading: By default does a LEFT JOIN
-        // This only works because we established the associations
+
         const bills = await Bill.findAll();
         bills.map(bill=>{
             return bill
@@ -33,7 +32,7 @@ router.get('/:id', async (req, res, next) => {
   })
 
 
-
+//localhost:1340/bills
 router.post('/', async (req, res, next) => {
     try {
         // Create new bill
