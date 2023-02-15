@@ -19,11 +19,6 @@ app.use('/bills', medicalBillsRoutes)
 // Logging middleware
 app.use(morgan('dev'))
 
-// Home Page
-app.get('/', (req, res, next) => {
-    console.log('Hello, I hit the home page')
-    // res.send(homePage())
-})
 
 
 
